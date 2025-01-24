@@ -16,7 +16,7 @@ app.use('/api/blogs', blogRoutes);
 app.use('/api/users', userRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/blogDB', {
+mongoose.connect('mongodb://localhost:27017/BlogDb2', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

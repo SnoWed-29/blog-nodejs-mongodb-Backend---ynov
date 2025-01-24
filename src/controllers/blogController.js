@@ -1,7 +1,6 @@
 const Blog = require('../models/blog.model');
 const User = require('../models/user.model');
 
-// Get all blogs
 exports.getAllBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find().populate('user');
@@ -11,7 +10,6 @@ exports.getAllBlogs = async (req, res) => {
   }
 };
 
-// Create a new blog
 exports.createBlog = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.user.username });
